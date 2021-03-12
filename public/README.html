@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReadMe</title>
+    <h3>ReadMe- Final Project</h3>
+</head>
+<body>
+* Store name- Flint
+<br>
+*What are you selling- Camping Product
+<br>
+* What additional page(s) did you add? How to operate them-
+<br>
+1. Rating Product-We created a "rating" function, the function makes validations from
+the frontend data . Moreover gets a rating between 1-5 (int only) , and the product's id and look it up in Redis.
+Then it check if the user already voted or not.if didn't vote adds the new rating to sum and calculate the average of rating.
+the user did vote, edits the existing vote
+In both cases update in DB and displays the new rating
+<br>
+2. Edit Product- We created a "editproduct" function , the function allows the admin the edit an existing product ,
+by giving to this function, few params the product id, a field and a new value.
+Then it checks the validity of the new value given according to
+the field given(like the image in the folder), and doesn't allow to add new values to the product. Then it updates the DB. Moreover not every field can be updated
+like product'id, rating, and more.
+<br>
+* What was hard to do? the cookies and session management
+
+<br>
+* Who is your partner? Noy 313296071
+<br>
+* What did you do? What did your partner do?-  I did the Backend side and Noy the Frontend , And we did the sync together
+while constantly updating each other about our status
+<br>
+* Specify all the different route your app supports:
+1.	http://localhost:3001/admin/addproduct<br>
+2.	http://localhost:3001/admin/editproduct<br>
+3.	http://localhost:3001/admin/purchases<br>
+4.	http://localhost:3001/admin/sessions<br>
+5.	http://localhost:3001/admin/:user/purchases<br>
+6.	http://localhost:3001/admin/search/searchuser<br>
+7.	http://localhost:3001/categories/:category<br>
+8.	http://localhost:3001/cart/:product/addone<br>
+9.	http://localhost:3001/cart/:product/removeone<br>
+10.	http://localhost:3001/cart/:product/removeallProduct<br>
+11.	http://localhost:3001/checkout/:price<br>
+12.	http://localhost:3001/connected-user<br>
+13.	http://localhost:3001/login<br>
+14.	http://localhost:3001/logout<br>
+15.	http://localhost:3001/login<br>
+16.	http://localhost:3001/register<br>
+17.	http://localhost:3001/products/:product<br>
+18.	http://localhost:3001/products/:product/addtocart<br>
+19.	http://localhost:3001/products/:product/rating/:rating<br>
+20.	http://localhost:3001/purchases<br>
+21.	http://localhost:3001/search/searchproduct<br>
+
+* How did you make your store secured?- In terms of security  , we never send
+user especially password info to non admin , and we dont send admin’s info to anyone (including other admins) . Im not allowing to login multiple times from the same browser, By block with sessions and cookies.
+
+
+<br>
+* Did you implement the store using react.js?-  Yes
+
+</body>
+</html>
